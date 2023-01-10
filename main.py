@@ -4,9 +4,13 @@ import os
 import time
 
 key = ""
-with open("key.txt", "r") as f:
-    key = f.readline()
-f.close()
+
+try:
+    with open("key.txt", "r") as f:
+        key = f.readline()
+    f.close()
+except:
+    pass
 
 if not key:
     print("key generating...")
